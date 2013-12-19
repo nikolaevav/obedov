@@ -29,3 +29,5 @@ end
 group :production do
   gem 'unicorn'
 end
+
+gem 'capistrano', '~> 2.15.5'
