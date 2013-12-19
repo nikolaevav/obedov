@@ -1,2 +1,130 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.nav#myMenu
+  %li.active{ 'data-menuanchor' => "about" }
+    = link_to 'О кафе', '#about'
+  %li{ 'data-menuanchor' => "interior" }
+    = link_to 'Интерьер', '#interior'
+  %li{ 'data-menuanchor' => "menu" }
+    = link_to 'Меню', '#menu'
+  %li{ 'data-menuanchor' => "contacts" }
+    = link_to 'Контакты', '#contacts'
+#section0.section.active
+  .block-info
+    .block-info-item
+      %li
+        .block-info-item-title
+          Доступные обеды с 11:00 до 18:00
+        .block-info-item-desc
+          салаты от 15р. \ супы от 35р. \ горячее от 60р.
+      %li
+        .block-info-item-title
+          Доступные обеды с 11:00 до 18:00
+        .block-info-item-desc
+          салаты от 15р. \ супы от 35р. \ горячее от 60р.
+      %li
+        .block-info-item-title
+          Доступные обеды с 11:00 до 18:00
+        .block-info-item-desc
+          салаты от 15р. \ супы от 35р. \ горячее от 60р.
+    .block-info-image
+    .block-info-leg
+  .block-logo
+    .block-logo-title
+      "Обедовъ"
+    .block-logo-desc
+      Приглашаем Вас отведать вкусные домашние блюда, приготовленные мамиными руками!
+#section1.section
+  .slide.active.firstSlide
+    .firstSlide-block-info
+      .firstSlide-block-info-title
+        Что мы можем вам предложить:
+      .firstSlide-block-info-text
+        %li Мы можем вместить до 50 человек
+        %li Закрыться для Вас для торжество
+        %li Привезти буфет на ваше мероприятие
+        %li Накормить доступным обедом и вкусным ужином
+        %li У нас так же есть доставка обедов
+      .firstSlide-block-info-link
+        .firstSlide-block-info-link-image
+        .firstSlide-block-info-link-text
+          Нажмите на стрелку, мы покажем вам наше кафе
+        .firstSlide-block-info-link-red.toSlide{"data-index" => "1"}
+
+    .firstSlide-block-image
+      = image_tag 'image_1.jpg', atl: 'Кaфе домешней еды Обедовъ', title: 'Кaфе домешней еды Обедовъ'
+      .firstSlide-block-image-info
+        \- У нас есть столики на 2-4 персоны
+  .slide.firstSlide-image1
+  .slide.firstSlide-image2
+  .slide.firstSlide-image3
+  .slide.firstSlide-image4
+
+
+#section2.section
+  .block-menu
+    .block-menu-title
+      Меню нашего кафе
+    .block-menu-list.first
+      .block-menu-text
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+
+    .block-menu-list
+      .block-menu-text
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+        .block-menu-text-item
+          .block-menu-text-title
+            суп
+          .block-menu-text-desc
+            Щи из свежей капусты - 300гр. \ 38р.
+            %br
+            Щи из свежей капусты - 300гр. \ 38р.
+  .block-menu-bottom
+    .block-menu-bottom-brokoli
+#section3.section
+  %h1 Looks good
