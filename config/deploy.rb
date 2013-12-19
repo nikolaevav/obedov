@@ -70,7 +70,7 @@ set :scm,             :git
 #set :repository,      "ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
 
 set :scm, :git
-set :repository, "git@github.com:nikolaevav/Photoemotions.git"
+set :repository, "git@github.com:nikolaevav/obedov.git"
 set :branch, 'master'
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию

@@ -1,0 +1,16 @@
+!!!
+%html{ lang: 'ru'}
+  %head
+    %title= yield_or_default(:title, "Кафе домашней еды - Обедовъ")
+    %meta{ content: content_for?(:description) ? yield(:description) : "Нашей кафе всегда открыто для вас, здесь вы можете вкусно покушать, и прияно провести время, с друзьями и близкими, унас так же есть бесплатный WIFI", name: "description"}
+    %meta{ content: content_for?(:keywords) ? yield(:keywords) : "Кафе Чебоксары, ", name: "keywords"}
+    %meta{ property: "og:title", content: content_for?(:title) ? yield(:title) : "Кафе домашней еды - Обедовъ"}
+    %meta{ property: "og:description", content: content_for?(:description) ? yield(:description) : "Нашей кафе всегда открыто для вас, здесь вы можете вкусно покушать, и прияно провести время, с друзьями и близкими, унас так же есть бесплатный WIFI", name: "description"}
+    %meta{ property: "og:article:author", content: content_for?(:author) ? yield(:author) : "Обедовъ"}
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag :modernizr
+    = csrf_meta_tags
+%body
+  = yield
+
