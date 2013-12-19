@@ -127,4 +127,134 @@
   .block-menu-bottom
     .block-menu-bottom-brokoli
 #section3.section
-  %h1 Looks good
+  .block-contact-info
+    Информация
+  .block-contact-info-menu
+  #map
+    :javascript
+      function initialize() {
+
+        var styles = [
+          {
+              "featureType": "administrative",
+              "stylers": [
+                  {
+                      "visibility": "on"
+                  }
+              ]
+          },
+          {
+              "featureType": "poi",
+              "stylers": [
+                  {
+                      "visibility": "simplified"
+                  }
+              ]
+          },
+          {
+              "featureType": "road",
+              "elementType": "labels",
+              "stylers": [
+                  {
+                      "visibility": "simplified"
+                  }
+              ]
+          },
+          {
+              "featureType": "water",
+              "stylers": [
+                  {
+                      "visibility": "simplified"
+                  }
+              ]
+          },
+          {
+              "featureType": "transit",
+              "stylers": [
+                  {
+                      "visibility": "simplified"
+                  }
+              ]
+          },
+          {
+              "featureType": "landscape",
+              "stylers": [
+                  {
+                      "visibility": "simplified"
+                  }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "stylers": [
+                  {
+                      "visibility": "off"
+                  }
+              ]
+          },
+          {
+              "featureType": "road.local",
+              "stylers": [
+                  {
+                      "visibility": "on"
+                  }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "visibility": "on"
+                  }
+              ]
+          },
+          {
+              "featureType": "water",
+              "stylers": [
+                  {
+                      "color": "#84afa3"
+                  },
+                  {
+                      "lightness": 52
+                  }
+              ]
+          },
+          {
+              "stylers": [
+                  {
+                      "saturation": -17
+                  },
+                  {
+                      "gamma": 0.36
+                  }
+              ]
+          },
+          {
+              "featureType": "transit.line",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#3f518c"
+                  }
+              ]
+          }
+        ];
+
+        var myLatlng = new google.maps.LatLng(56.138807,47.246167);
+        var mapOptions = {
+          zoom: 16,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: styles
+        };
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Кафе домашней еды - Обедовъ'
+        });
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
