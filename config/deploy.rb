@@ -54,8 +54,8 @@ role :app,            deploy_server
 role :db,             deploy_server, :primary => true
 
 # Следующие строки необходимы, т.к. ваш проект использует rvm.
-set :rvm_ruby_string, "2.0.0"
-set :rake,            "rvm use #{rvm_ruby_string} do bundle exec rake" 
+set :rvm_ruby_string, "2.1.1"
+set :rake,            "rvm use #{rvm_ruby_string} do bundle exec rake"
 set :bundle_cmd,      "rvm use #{rvm_ruby_string} do bundle"
 
 # Настройка системы контроля версий и репозитария,
@@ -91,6 +91,7 @@ task :copy_database_config, roles => :app do
   run "rm -f #{release_path}/config/database.yml"
   run "cp #{db_config} #{release_path}/config/database.yml"
   run "cp #{app_config} #{release_path}/config/application.yml"
+  run "cp #{shared_path}/secrets.yml #{release_path}/config/secrets.yml"
   #Если нужна папка uploads то нужно сделать ее в папке shared чтобы не потерять файлы при деплое
   # ln -s #{shared_path}/uploads #{release_path}/public"
   run "ln -fs #{shared_path}/uploads #{release_path}/public/uploads"
